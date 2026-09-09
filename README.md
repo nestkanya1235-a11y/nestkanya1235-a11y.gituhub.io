@@ -107,7 +107,7 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
       transform:rotate(-1.4deg);
     }
     .name-card:before{
-      content:"PRODUCT DESIGNER"; position:absolute;
+      content:"GRAPHIC DESIGN"; position:absolute;
       left:-82px; bottom:-17px; background:var(--yellow);
       padding:8px 12px; font:600 9px "IBM Plex Mono",monospace;
       transform:rotate(-5deg);
@@ -342,8 +342,7 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
           <div>
             <div class="about-copy">
               Hi! I'm <strong>Kanyawee Srisit</strong>, but you can call me <strong>Nest</strong>.
-              I'm interested in making complicated things feel simple — from the first sketch
-              to the tiny details that make an interface feel human.
+              I love to do arts and graphics. Interested in games, animations and cutesy!
               <br><br>
               <strong>EDUCATION</strong><br>
               Rajamangala University of Technology Rattanakosin
