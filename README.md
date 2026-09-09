@@ -5,8 +5,8 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanyawee Srisit — 3D Portfolio</title>
-  <meta name="description" content="3D scrapbook portfolio of Kanyawee Srisit (Nest), Rajamangala University of Technology Rattanakosin." />
+  <title>Kanyawee Srisit — Artist & Graphic Designer</title>
+  <meta name="description" content="Portfolio of Kanyawee Srisit (Nest), Artist and Graphic Designer." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Patrick+Hand&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -107,7 +107,7 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
       transform:rotate(-1.4deg);
     }
     .name-card:before{
-      content:"GRAPHIC DESIGN"; position:absolute;
+      content:"ARTIST & GRAPHIC DESIGNER"; position:absolute;
       left:-82px; bottom:-17px; background:var(--yellow);
       padding:8px 12px; font:600 9px "IBM Plex Mono",monospace;
       transform:rotate(-5deg);
@@ -305,7 +305,6 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
       <div class="logo-dot">✦</div>
       <a href="#home" class="active">★ HOME</a>
       <a href="#about">▦ ABOUT</a>
-      <a href="#work">◆ WORK</a>
       <a href="#notes">✦ NOTES</a>
       <div class="nav-spacer"></div>
       <div class="socials"><span>in</span><span>◎</span><span>✉</span></div>
@@ -321,10 +320,10 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
         <div class="hero-copy">
           <div class="tiny-note">my name is</div>
           <div class="name-card">
-            <h1>SillyMAYA</h1>
-            <div class="sub">KANYAWEE SRISIT · NEST · PRODUCT DESIGN</div>
+            <h1>NEST</h1>
+            <div class="sub">KANYAWEE SRISIT · NEST · ARTIST & GRAPHIC DESIGN</div>
           </div>
-          <h2>I design digital experiences that <em>get out of your way.</em> ✿</h2>
+          <h2>I create <em>visuals and graphic assets</em> for games and UI. ✿</h2>
           <button class="cta" onclick="document.querySelector('#about').scrollIntoView()">↓ &nbsp; GET TO KNOW ME</button>
         </div>
         <div class="scene-hint">DRAG TO ROTATE · SCROLL TO ZOOM</div>
@@ -337,15 +336,15 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
           <div class="photo-card">
             <div class="tape"></div>
             <div class="portrait">3D PORTRAIT</div>
-            <div class="caption">Nest · designer / maker</div>
+            <div class="caption">Nest · artist / graphic designer</div>
           </div>
           <div>
             <div class="about-copy">
               Hi! I'm <strong>Kanyawee Srisit</strong>, but you can call me <strong>Nest</strong>.
-              I love to do arts and graphics. Interested in games, animations and cutesy!
+              I love to do visual and assets for game and UI assets.
               <br><br>
-              <strong>EDUCATION</strong><br>
-              Rajamangala University of Technology Rattanakosin
+              <strong>POSITION</strong><br>
+              Artist and Graphic Designer
             </div>
             <div class="skill-wrap">
               <span class="skill" style="--r:-2deg">Interaction Design</span>
@@ -359,39 +358,8 @@ Personal gathering source codes and asssets -RMUTR_Kanyawee1101-
         </div>
       </section>
 
-      <section class="projects" id="work">
-        <div class="section-label">selected experiments / page 02</div>
-        <h2 class="section-title">FEATURED WORKS</h2>
-        <div class="project-grid">
-          <article class="project" onclick="openProject('Tandem','A social split-bill concept focused on making shared expenses feel transparent, friendly, and low-friction.')">
-            <small>PROJECT 01 · PRODUCT</small>
-            <h3>TANDEM</h3>
-            <p>From “who owes who?” to a shared moment that finally feels simple.</p>
-            <div class="shape"></div>
-          </article>
-          <article class="project" onclick="openProject('Wayline','A transit wayfinding concept exploring clearer information hierarchy, quick decisions, and confident movement through the city.')">
-            <small>PROJECT 02 · UX/UI</small>
-            <h3>WAYLINE</h3>
-            <p>Making a city feel easier to navigate, one useful signal at a time.</p>
-            <div class="shape"></div>
-          </article>
-          <article class="project" onclick="openProject('Forge','A concept for helping new engineers move from day one to shipping without the panic — with structured guidance and feedback loops.')">
-            <small>PROJECT 03 · SYSTEM</small>
-            <h3>FORGE</h3>
-            <p>Reducing the gap between joining a team and feeling useful.</p>
-            <div class="shape"></div>
-          </article>
-          <article class="project" onclick="openProject('Playground','A collection of visual experiments, motion tests, 3D sketches, and tiny interactions made just for fun.')">
-            <small>PROJECT 04 · LAB</small>
-            <h3>PLAYGROUND</h3>
-            <p>Little experiments with big curiosity.</p>
-            <div class="shape"></div>
-          </article>
-        </div>
-      </section>
-
       <section id="notes">
-        <div class="section-label">little things / page 03</div>
+        <div class="section-label">little things / page 02</div>
         <h2 class="section-title">DESIGN NOTES</h2>
         <div class="timeline">
           <article class="note">
