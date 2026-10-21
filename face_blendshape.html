@@ -59,9 +59,7 @@
     let previousTime;
 
     await mindar.start();
-    function animate(time) {
-      const deltaTime = previousTime === undefined ? 0 : (time - previousTime) / 1000;
-      previousTime = time;
+    function animate() {
       const categories = mindar.getLatestEstimate()?.blendshapes?.categories;
       // จับคู่ชื่อ blendshape กับ morph target ของโมเดล เช่น jawOpen, eyeBlinkLeft
       for (const mesh of meshes) {
