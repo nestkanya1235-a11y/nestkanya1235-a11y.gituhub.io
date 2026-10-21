@@ -34,29 +34,14 @@
     roomEnvironment.dispose();
     pmremGenerator.dispose();
     scene.add(new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1));
-    //const model = await new GLTFLoader().loadAsync('https://storage.googleapis.com/mediapipe-tasks/face_landmarker/raccoon_head.glb');
     const model = await new GLTFLoader().loadAsync('https://nestkanya1235-a11y.github.io/nestkanya1235-a11y.gituhub.io/face__new.glb');
-    model.scene.scale.setScalar(1.8);
+    
+    model.scene.scale.setScalar(2);
     mindar.addAnchor(1).group.add(model.scene);
     const meshes = [];
     model.scene.traverse(object => {
       if (object.isMesh && object.morphTargetDictionary && object.morphTargetInfluences) meshes.push(object);
     });
-
-    // Adaptive smoothing: ต่างจากค่าปัจจุบันน้อย → นุ่มมาก, ต่างมาก → ตามเร็ว
-    // slowTime / fastTime เป็นวินาที ส่วน low / high เป็นผลต่าง score (ช่วง 0–1)
-    const blendshapeSmoothing = { slowTime: 0.1, fastTime: 0.02, low: 0.02, high: 0.2 };
-    const eyeBlinkSmoothing = { slowTime: 0.03, fastTime: 0.008, low: 0.02, high: 0.15 };
-
-    function smoothBlendshape(current, target, deltaTime, settings) {
-      const difference = Math.abs(target - current);
-      // เปลี่ยนความเร็วอย่างต่อเนื่อง เพื่อไม่ให้กระตุกตรงจุดเปลี่ยนโหมด
-      const responsiveness = THREE.MathUtils.smoothstep(difference, settings.low, settings.high);
-      const smoothTime = THREE.MathUtils.lerp(settings.slowTime, settings.fastTime, responsiveness);
-      const alpha = 1 - Math.exp(-deltaTime / smoothTime);
-      return THREE.MathUtils.lerp(current, target, alpha);
-    }
-    let previousTime;
 
     await mindar.start();
     function animate() {
@@ -65,19 +50,13 @@
       for (const mesh of meshes) {
         for (const { categoryName, score } of categories ?? []) {
           const index = mesh.morphTargetDictionary[categoryName];
-          if (index !== undefined) {
-            const current = mesh.morphTargetInfluences[index];
-            const settings = categoryName === 'eyeBlinkLeft' || categoryName === 'eyeBlinkRight'
-              ? eyeBlinkSmoothing
-              : blendshapeSmoothing;
-            mesh.morphTargetInfluences[index] = smoothBlendshape(current, score, deltaTime, settings);
-          }
+          if (index !== undefined) mesh.morphTargetInfluences[index] = score;
         }
       }
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
-    requestAnimationFrame(animate);
+    animate();
   </script>
 </body>
 </html>
